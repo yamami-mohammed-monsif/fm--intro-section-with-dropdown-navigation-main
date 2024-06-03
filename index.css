@@ -1,0 +1,46 @@
+:root {
+
+    --clr-neutral-200: hsl(0, 0%, 98%);
+    --clr-neutral-400: hsl(0, 0%, 41%);
+    --clr-neutral-800: hsl(0, 0%, 8%);
+
+    --ff-main: "Epilogue", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    /* Set core body defaults */
+    min-height: 100vh;
+    line-height: 1.5;
+
+
+}
+
+h1 {
+    line-height: 1.1;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
