@@ -7,6 +7,8 @@
     --ff-main: "Epilogue", sans-serif;
 
     --fs-400: .9rem;
+    /* --fs-700: 1.755rem; */
+    --fs-700: clamp(1.5rem, 7vw, 2.9rem);
 }
 
 /* Box sizing rules */
@@ -27,6 +29,7 @@ body {
 
     font-family: var(--ff-main);
     font-size: var(--fs-400);
+    font-weight: 500;
     color: var(--clr-neutral-400);
     background-color: var(--clr-neutral-200);
 
@@ -35,6 +38,9 @@ body {
 
 h1 {
     line-height: 1.1;
+    color: var(--clr-neutral-800);
+    font-size: var(--fs-700);
+    font-weight: 800;
 }
 
 /* remove list default styles */
@@ -49,10 +55,19 @@ a {
     font: inherit;
 }
 
+/* remove button default styles */
+button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 /* Make images easier to work with */
 img,
-picture {
-  max-width: 100%;
+picture {    
+  max-width: 95%;
   display: block;
 }
 
@@ -62,6 +77,27 @@ header {
     gap: min(10vw, 5.5rem);
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "col1 col2";
+    gap: 4rem;
+    align-items: center;
+
+    width: min(85%, 800px);
+    margin-inline: auto;
+
+    margin-top: 3rem;
+}
+
+.grid-col-1 {
+    grid-area: col2;
+}
+
+.grid-col-2 {
+    grid-area: 1;
+}
+
 /* make the humberger button invisible only on large screen sizes */
 .humberger-btn {
     display: none;
@@ -69,7 +105,7 @@ header {
 
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1050px;
     margin-inline: auto;
 }
 
@@ -98,7 +134,6 @@ header {
 }
 
 .dropdown::after {
-    /* content: url(images/icon-arrow-down.svg); */
     content: var(--content, url(images/icon-arrow-down.svg));
     display: inline-block;
     width: .5rem;
@@ -158,11 +193,52 @@ header {
     margin-bottom: .5rem;
 }
 
+.description {
+    font-size: clamp(.95rem, 3vw, 1rem);
+
+    margin-block: clamp(2rem, 4.5vh, 5rem);
+}
+
+/* style the learn more button */
+.learn-more {
+    /* margin-top: 1rem;
+    margin-bottom: 2rem; */
+    padding: .6rem 1.3rem;
+    width: fit-content;
+
+    font-weight: 600;
+
+    color: var(--clr-neutral-200);
+    background-color: var(--clr-neutral-800);
+
+    border-radius: .6rem;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: clamp(2rem, 6vh, 5rem);
+}
+
+.brands img {
+    width: 4rem;
+}
+
 @media (max-width: 700px) {
 
     header {
         display: flex;
         justify-content: space-between;
+    }
+
+    main {
+        display: block;
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 2rem;
     }
 
     /* set the navbar to be invisible on small sceen size */
@@ -246,12 +322,16 @@ header {
 
         margin-left: 1rem;
     }
+
+    .learn-more {
+        margin-inline: auto;
+    }
 }
 
 .overlay {
         position: fixed;
         inset: 0 0 0 0;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
 
         display: none;
     }
