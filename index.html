@@ -16,22 +16,51 @@
 <body>
 
   <div class="container">
+    <!-- this overlay shades all the rest of the screen when the side navbar is open -->
+    <div class="overlay" id="overlay"></div>
     <header>
       <div class="logo">
         <img src="images/logo.svg" alt="">
       </div>
 
-      <span class="humberger-btn" aria-controls="navigation-bar"></span>
+      <span class="humberger-btn" id="humberger-btn" aria-controls="navigation-bar" data-menu="closed"></span>
 
-      <nav class="navigation-bar" id="navigation-bar">
+      <nav class="navigation-bar" id="navigation-bar" aria-expanded="false">
         <ul class="nav-links">
           <li>
-            <a class="dropdown" href="#">Features</a>
-            <span class="bg-arrow-img"></span>
+            <p class="dropdown" id="features-btn">Features</p>
+            <ul class="dropdown-menu-features" id="dropdown-menu-features" data-visible="false">
+              <li>
+                <div><img src="images/icon-todo.svg" alt=""></div>
+                <a href="">Todo List</a>
+              </li>
+              <li>
+                <div><img src="images/icon-calendar.svg" alt=""></div>
+                <a href="">Calendar</a>
+              </li>
+              <li>
+                <div><img src="images/icon-reminders.svg" alt=""></div>
+                <a href="">Reminders</a>
+              </li>
+              <li>
+                <div><img src="images/icon-planning.svg" alt=""></div>
+                <a href="">Planning</a>
+              </li>
+            </ul>
           </li>
           <li>
-            <a class="dropdown" href="#">Company</a>
-            <span class="bg-arrow-img"></span>
+            <p class="dropdown" id="company-btn">Company</p>
+            <ul class="dropdown-menu-company" id="dropdown-menu-company" data-visible="false">
+              <li>
+                <a href="">History</a>
+              </li>
+              <li>
+                <a href="">Our Team</a>
+              </li>
+              <li>
+                <a href="">Blog</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#">Careers</a>
@@ -71,5 +100,6 @@
     </main> -->
   </div>
 
+  <script src="index.js"></script>
 </body>
 </html>

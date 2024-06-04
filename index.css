@@ -29,6 +29,8 @@ body {
     font-size: var(--fs-400);
     color: var(--clr-neutral-400);
     background-color: var(--clr-neutral-200);
+
+    overflow-x: hidden;
 }
 
 h1 {
@@ -60,7 +62,7 @@ header {
     gap: min(10vw, 5.5rem);
 }
 
-/* make the humberger button visible only on small screen sizes */
+/* make the humberger button invisible only on large screen sizes */
 .humberger-btn {
     display: none;
 }
@@ -80,6 +82,8 @@ header {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    position: relative;
 }
 
 .registration {
@@ -88,9 +92,14 @@ header {
     gap: 1.5rem;
 }
 
-/* create the arrow btn of the dropdown */
+/* create the arrow button of the dropdown */
+.dropdown {
+    cursor: pointer;
+}
+
 .dropdown::after {
-    content: url(images/icon-arrow-down.svg);
+    /* content: url(images/icon-arrow-down.svg); */
+    content: var(--content, url(images/icon-arrow-down.svg));
     display: inline-block;
     width: .5rem;
     aspect-ratio: 1;
@@ -104,6 +113,51 @@ header {
     padding: .3rem .8rem;
 }
 
+/* style the features drop down menu */
+.dropdown-menu-features {
+    background-color: var(--clr-neutral-200);
+
+    border: solid 1px;
+    border-radius: .6rem;
+
+    position: absolute;
+    top: 2.5rem;
+    left: -3.7rem;
+
+    padding: 1rem;
+
+    display: none;
+}
+
+.dropdown-menu-features li {
+    display: flex;
+    gap: .9rem;
+}
+
+.dropdown-menu-features > li:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+
+/* style the company drop down menu */
+.dropdown-menu-company {
+    background-color: var(--clr-neutral-200);
+
+    border: solid 1px;
+    border-radius: .6rem;
+
+    position: absolute;
+    top: 2.5rem;
+
+    padding: 1rem;
+
+    display: none;
+}
+
+.dropdown-menu-company > li:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
 @media (max-width: 700px) {
 
     header {
@@ -115,7 +169,8 @@ header {
     .navigation-bar {
         position: fixed;
         inset: 0 0 0 30%;
-        background-color: rgb(45, 53, 59);
+
+        background-color: var(--clr-neutral-200);
 
         flex-direction: column;
         justify-content: flex-start;
@@ -125,7 +180,14 @@ header {
         padding-top: min(10vh, 5rem);
         padding-inline: 2.5rem;
 
-        z-index: 100;
+        z-index: 1000;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .navigation-bar[aria-expanded = 'true'] {
+        transform: translateX(0%);
     }
 
     .nav-links {
@@ -158,4 +220,38 @@ header {
 
         z-index: 9999;
     }
+
+    .humberger-btn[data-menu = 'open'] {
+        background-image: url(images/icon-close-menu.svg);
+    }
+
+    .dropdown::after {
+        margin-left: 1rem;
+    }
+
+    /*features drop down menu */
+    .dropdown-menu-features {
+        position: static;
+
+        border: none;
+
+        margin-left: 1rem;
+    }
+
+    /*company drop down menu */
+    .dropdown-menu-company {
+        position: static;
+
+        border: none;
+
+        margin-left: 1rem;
+    }
 }
+
+.overlay {
+        position: fixed;
+        inset: 0 0 0 0;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        display: none;
+    }
