@@ -55,6 +55,10 @@ a {
     font: inherit;
 }
 
+ul a:hover {
+    color: var(--clr-neutral-800);
+}
+
 /* remove button default styles */
 button {
     font: inherit;
@@ -101,6 +105,7 @@ main {
 /* make the humberger button invisible only on large screen sizes */
 .humberger-btn {
     display: none;
+    cursor: pointer;
 }
 
 .container {
@@ -129,8 +134,9 @@ main {
 }
 
 /* create the arrow button of the dropdown */
-.dropdown {
+.dropdown:hover {
     cursor: pointer;
+    color: var(--clr-neutral-800);
 }
 
 .dropdown::after {
@@ -146,6 +152,11 @@ main {
     border-radius: .5rem;
 
     padding: .3rem .8rem;
+}
+
+.register:hover {
+    color: var(--clr-neutral-800);
+    border-color: var(--clr-neutral-800);
 }
 
 /* style the features drop down menu */
@@ -201,8 +212,6 @@ main {
 
 /* style the learn more button */
 .learn-more {
-    /* margin-top: 1rem;
-    margin-bottom: 2rem; */
     padding: .6rem 1.3rem;
     width: fit-content;
 
@@ -212,6 +221,13 @@ main {
     background-color: var(--clr-neutral-800);
 
     border-radius: .6rem;
+}
+
+.learn-more:hover {
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-neutral-800);
+
+    border: solid 1px;
 }
 
 .brands {
