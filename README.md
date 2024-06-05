@@ -81,7 +81,7 @@ By combining these technologies, the project delivers a modern, responsive, and 
 
    cd fm--intro-section-with-dropdown-navigation-main
 
-   open indHere is an example of what you can write in the Usage Instructions section of your README file to guide users on how to interact with your project:
+   open index.html
 
 
 ## Usage
