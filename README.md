@@ -4,90 +4,107 @@
 
 ## Welcome! 👋
 
-Thanks for checking out this front-end coding challenge.
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Table of contents
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+- [Demo](#demo)
+- [Description](#description)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
 
-## The challenge
+## Demo
 
-Your challenge is to build out this intro section with dropdown navigation and get it looking as close to the design as possible.
+https://yamami-mohammed-monsif.github.io/fm--intro-section-with-dropdown-navigation-main/
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Description
 
-Your users should be able to:
+This repository contains the HTML, CSS, and JavaScript code for an intro section with dropdown navigation. The page features a navigation bar with dropdown menus for "Features" and "Company", a "Careers" and "About" link, as well as login and register options. On smaller screens, a hamburger menu button appears, which toggles the navigation bar visibility. The JavaScript functionality enhances user interaction by adding event listeners for the hamburger menu button and the dropdown menus. When the hamburger menu button is clicked, it toggles the navigation bar's visibility and an overlay that shades the rest of the screen. The "Features" and "Company" dropdown menus show or hide their respective options when clicked, changing the dropdown arrow's direction accordingly. The overlay ensures focus remains on the navigation menu when it is open on smaller screens.
 
-- View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
-- View the optimal layout for the content depending on their device's screen size
-- See hover states for all interactive elements on the page
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+## Features
 
-## Where to find everything
+### Responsive Navigation Menu:
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Hamburger Menu: On smaller screens, users can toggle the navigation menu by clicking the hamburger icon.
+- Dropdown Menus: Users can expand and collapse the "Features" and "Company" dropdown menus to view more options.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Interactive Elements:
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Dropdown Menu Items: Each item within the dropdown menus is clickable and includes icons for better visual context.
+- Overlay Effect: An overlay appears to shade the rest of the screen when the side navigation bar is open, ensuring the user’s focus is on the menu.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Responsive Layout:
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- The layout adjusts gracefully between desktop and mobile views, ensuring a consistent user experience across different devices.
 
-## Building your project
+### Call to Action:
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+- Learn More Button: A prominent button encourages users to learn more about the service.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### Brand Logos:
 
-## Deploying your project
+- Displays brand logos, providing visual credibility and partnership information.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+## Technologies Used
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### HTML:
 
-## Create a custom `README.md`
+- Structuring the content and defining the layout of the web page.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### CSS:
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- Custom Properties: For defining and using color and font variables.
+- Media Queries: For responsive design adjustments.
+- Flexbox and Grid: For responsive layout design.
+- Hover Effects and Transitions: For interactive feedback.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### JavaScript:
 
-## Submitting your solution
+- DOM Manipulation: To handle user interactions such as opening and closing the navigation menu and dropdowns.
+- Event Listeners: For capturing and responding to user actions like clicks on the hamburger menu or dropdown buttons.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+By combining these technologies, the project delivers a modern, responsive, and interactive user interface suitable for a professional web page with dropdown navigation.
 
-## Sharing your solution
 
-There are multiple places you can share your solution:
+## installation
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+## Installation
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yamami-mohammed-monsif/fm--intro-section-with-dropdown-navigation-main
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+   cd fm--intro-section-with-dropdown-navigation-main
 
-## Got feedback for us?
+   open indHere is an example of what you can write in the Usage Instructions section of your README file to guide users on how to interact with your project:
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+## Usage
 
-**Have fun building!** 🚀
+Once you have the project running locally, you can interact with it as follows:
+
+1. **Navigation Bar:**
+   - On desktop screens, you will see the full navigation bar at the top.
+   - On smaller screens, click the **hamburger menu icon** (three horizontal lines) in the top right corner to toggle the navigation menu.
+
+2. **Dropdown Menus:**
+   - Click on the **"Features"** or **"Company"** menu items to expand or collapse the dropdown menus. These will show additional options related to each category.
+   - The dropdown arrow will change direction when the menu is expanded or collapsed.
+
+3. **Overlay Effect:**
+   - When the navigation menu is open on smaller screens, an overlay will appear, shading the rest of the screen to keep the focus on the menu.
+   - Click outside the navigation menu or on the close icon to hide the menu and remove the overlay.
+
+4. **Call to Action:**
+   - Click the **"Learn More"** button to be taken to additional information about the service or feature being highlighted.
+
+5. **Brand Logos:**
+   - Scroll down to see the various brand logos displayed, providing visual credibility and partnership information.
+
+By following these instructions, you will be able to fully explore and interact with the different features and functionalities of the project.
+
